@@ -47,7 +47,7 @@
 	Podstawiając warunek początkowy $U_c(0) = 0 \implies Q(0) = 0$:
 	$$Q(t) = EC(1-e^{\frac{-1}{RC}t})$$ 
 	Z tego równania wynika, że czas ładowania wynosi:
-	$$t = RC \log_n(\frac{E}{E - U_c}) $$
+	$$t = RC \ln(\frac{E}{E - U_c}) $$
 \subsection{Rozładowywanie}
 	Rozpisując prawo Kirchoffa dla E=0:
 	\begin{align*}
@@ -55,15 +55,15 @@
 		R \cdot \frac{dQ}{dt} + \frac{1}{C} \cdot Q &= 0 \\
 		\frac{1}{Q} \cdot \frac{dQ}{dt} &= \frac{-1}{RC} \\
 		\int \frac{1}{Q} dQ &= \frac{-1}{RC} \int dt \\
-		\log_nQ &= \frac{-1}{RC}t + A \\
+		\ln Q &= \frac{-1}{RC}t + A \\
 		Q(t) &= Be^{\frac{-1}{RC}t} \\		
 	\end{align*}
 	Podstawiając warunek początkowy $U_c(0) = E \implies Q(0) = EC$:
 	$$Q(t) = ECe^{\frac{-1}{RC}t}$$
-	Z tego równania wynika, że czas ładowania wynosi:
-	$$t = RC \log_n(\frac{E}{U_c}) $$
+	Z tego równania wynika, że czas rozładowania wynosi:
+	$$t = RC \ln(\frac{E}{U_c}) $$
 	Wiemy więc, że pojemność kondensatora wynosi:
-	$$C = \dfrac{t}{R \log_n(\frac{E}{U_C}})$$
+	$$C = \dfrac{t}{R \ln(\frac{E}{U_C})}$$
 %----------------------------------------------------------------------------------
 \section{Metoda przeprowadzania badań}
 
