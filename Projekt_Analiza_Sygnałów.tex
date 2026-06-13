@@ -21,7 +21,49 @@
 
 %----------------------------------------------------------------------------------
 \section{Opis teoretyczny}
-
+\subsection{Ogólna teoria}
+	Założeniami modelu jest fakt, że jest on izolowany oraz dostarczane jest idealne źródło napięcia - E. W kondensatorze energia gromadzona jest w postaci pola elektrycznego. Składa się on z dwóch przewodzących elektrod rozdzielonych dielektrykiem. Zjawisko gromadzenia ładunku elektrycznego opisuje definicja pojemności:
+	$$ C = \frac{Q}{U_c}$$
+	gdzie $Q$ to ładunek elektryczny, a $U_c$ to napięcie na kondensatorze.
+	Z drugiego prawa Kirchoffa wiemy, że na zamkniętym obwodzie zawierającym rezystor oraz kondensator:
+	$$ E = U_R + U_c$$
+	gdzie $U_R$ to napięcie na rezystorze. Z prawa Ohma natomiast wiemy, że:
+	$$ U_R = I \cdot R $$
+	gdzie $I$ to natężenie prądu elektrycznego, $R$ to rezystancja oraz że:
+	$$ I = \frac{dQ}{dt}$$
+\subsection{Ładowanie}
+	Rozpisując prawo Kirchoffa:
+	\begin{align*}
+		U_R + U_c &= E \\
+		I \cdot R + \frac{Q}{C} &= E \\
+		\frac{dQ}{dt} \cdot R + \frac{Q}{C} &= E \\
+		R \cdot Q' + \frac{1}{C} \cdot Q &= E \\
+		Q' + \frac{1}{RC} \cdot Q &= \frac{E}{R} \\
+		e^{\frac{1}{RC} \cdot t}Q' + e^{\frac{1}{RC} \cdot t}\frac{1}{RC} \cdot Q &= e^{\frac{1}{RC} \cdot t}\frac{E}{R} \\
+		(e^{\frac{1}{RC} \cdot t} \cdot Q)' &= \frac{E}{R} e^{\frac{1}{RC} \cdot t} \\
+		e^{\frac{1}{RC} \cdot t} \cdot Q &= \frac{E}{R}\\
+		Q(t) &= EC + Ae^{\frac{-1}{RC}t} 
+	\end{align*}
+	Podstawiając warunek początkowy $U_c(0) = 0 \implies Q(0) = 0$:
+	$$Q(t) = EC(1-e^{\frac{-1}{RC}t})$$ 
+	Z tego równania wynika, że czas ładowania wynosi:
+	$$t = RC \log_n(\frac{E}{E - U_c}) $$
+\subsection{Rozładowywanie}
+	Rozpisując prawo Kirchoffa dla E=0:
+	\begin{align*}
+		U_r + U_c &= 0 \\
+		R \cdot \frac{dQ}{dt} + \frac{1}{C} \cdot Q &= 0 \\
+		\frac{1}{Q} \cdot \frac{dQ}{dt} &= \frac{-1}{RC} \\
+		\int \frac{1}{Q} dQ &= \frac{-1}{RC} \int dt \\
+		\log_nQ &= \frac{-1}{RC}t + A \\
+		Q(t) &= Be^{\frac{-1}{RC}t} \\		
+	\end{align*}
+	Podstawiając warunek początkowy $U_c(0) = E \implies Q(0) = EC$:
+	$$Q(t) = ECe^{\frac{-1}{RC}t}$$
+	Z tego równania wynika, że czas ładowania wynosi:
+	$$t = RC \log_n(\frac{E}{U_c}) $$
+	Wiemy więc, że pojemność kondensatora wynosi:
+	$$C = \dfrac{t}{R \log_n(\frac{E}{U_C}})$$
 %----------------------------------------------------------------------------------
 \section{Metoda przeprowadzania badań}
 
