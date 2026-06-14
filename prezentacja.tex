@@ -109,6 +109,15 @@ $$C = \dfrac{\Delta t}{R \ln(\frac{1 - \alpha}{1 - \beta})}$$
 \begin{frame}{Metoda Przeprowadzenia Badań}{Próbkowanie}
 Mikrokontroler Arduino UNO potrzebuje 100 mikrosekund na wykonanie pełnego pomiaru, a teoretyczna maksymalna częstotliwość próbkowania to około 10kHz.
 \end{frame}
+
+\begin{frame}{Opis sprzętu}
+Opornik ma wartość nominalną 220$\Omega$ z tolerancją $\pm2,2\Omega$. Kondensator ma nominalną pojemność $100\mu F$. Napięcie znamionowe wynosci 35V.
+\end{frame}
+
+\begin{frame}{Opis układu RC}
+Układ składa się z 2 oporników, kondensatora oraz Arduino. Arduino mierzy spadki napięcia na kondensatorze. Aktywny układ korzysta tylko z jednego opornika, ponieważ drugi jest odłączony przez źródło napięcia.
+\end{frame}
+
 \begin{frame}{Wyniki}
 Sporządziliśmy pomiary dla następujących par parametrów $\alpha$ i $\beta$: 0,1 i 0,9; 0,2 i 0,8; 0,3 i 0,7. Zapisaliśmy po 10 wyników dla każdej z nich. Z prawa wielkich liczb, gdy danych jest dużo ich średnia będzie w przybliżeniu zgadzać się z wartością prawdziwą.
 \end{frame}
