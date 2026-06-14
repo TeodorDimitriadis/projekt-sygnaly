@@ -171,7 +171,6 @@ Sporządziliśmy pomiary dla następujących par parametrów $\alpha$ i $\beta$:
     \end{tabular}%
   \label{tab:addlabel}%
 \end{table}%
-
 \end{frame}
 \begin{frame}{Analiza}
 Uzyskane wyniki wskazują, że wyznaczona pojemność kondensatora znajduję się w zakresie tolerancji wartości nominalnej $100 \mu F$ w dwóch z trzech analizowanych przypadków.
