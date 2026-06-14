@@ -68,6 +68,5 @@ Sporządziliśmy pomiary dla następujących par parametrów $\alpha$ i $\beta$:
   \label{tab:addlabel}%
 \end{table}%
 
-Po analizie wyników widzimy, że są one bliskie sobie. Przyjmujemy, że niepewność wynosi 1 procent ze średniej.
 
 \end{document}
